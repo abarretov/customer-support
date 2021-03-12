@@ -1,0 +1,113 @@
+.form {
+  border-radius: 3px;
+  padding: 10% 5%;
+  background-color: $very-light-gray;
+  &__group {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 8%;
+    @include respond-to(large) {
+      margin-bottom: 5%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    border-radius: 3px;
+    padding: 5% 0;
+    width: 100px;
+    color: $white;
+    font-weight: 700;
+    @include respond-to(large) {
+      padding: 4%;
+    }
+    &--submit {
+      background-color: $pure-blue;
+    }
+  }
+  & label, input, textarea {
+    font-family: $open-sans;
+    font-size: 0.8rem;
+  }
+  & label {
+    display: block;
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 3%;
+  }
+  & input, textarea {
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    padding: 3% 2%;
+    @include placeholder() {
+      color: $dark-gray;
+      background-color: $light-gray;
+    }
+  }
+  // &__field {
+  //   &--search {
+  //     color: $black;
+  //     background-color: $pure-blue;
+  //   }
+  //   &--email {
+  //     border: 0;
+  //     width: 270px;
+  //     @include respond-to(tiny) {
+  //       width: 330px;
+  //     }
+  //     @include respond-to(large) {
+  //       width: 450px;
+  //     }
+  //     @include respond-to(extra-large) {
+  //       padding: 1rem 0;
+  //     }
+  //     &::placeholder {
+  //       color: $black;
+  //     }
+  //   }
+  //   &--submit {
+  //     border-radius: 3px;
+  //     border: none;
+  //     padding: 5% 10%;
+  //     color: $white;
+  //     font-weight: 700;
+  //     background-color: $pure-blue;
+  //     text-align: center;
+  //     @include respond-to(extra-large) {
+  //       padding: 1rem 0;
+  //     }
+  //     @include respond-to(huge) {
+  //       padding: 1.3rem 1.5rem;
+  //       font-size: 1.2rem;
+  //     }
+  //     @include respond-to(giant) {
+  //       padding: 1.8rem 2rem;
+  //       font-size: 1.5rem;
+  //     }
+  //     @include respond-to(colossal) {
+  //       padding: 2.2rem 2.6rem;
+  //       font-size: 1.8rem;
+  //     }
+  //   }
+  //   &--submit, &--search, &--select {
+  //     &:hover {
+  //       cursor: pointer;
+  //     }
+  //   }
+  //   &--textarea {
+  //     height: auto;
+  //   }
+  //   &--contact {
+  //     padding: 0.8rem 0.75rem;
+  //     width: 100%;
+  //   }
+  //   &--check {
+  //     margin: 0;
+  //     margin-top: 2px;
+  //     margin-right: 5px;
+  //     width: unset;
+  //     height: unset;
+  //   }
+  // }
+}

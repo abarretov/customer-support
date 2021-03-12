@@ -1,0 +1,68 @@
+.brand {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  line-height: 1;
+  text-decoration: none;
+  z-index: 102;
+  @include respond-to(small) {
+    width: 30%;
+  }
+  @include respond-to(medium) {
+    font-size: 2.5rem;
+  }
+  @include respond-to(large) {
+    left: 2%;
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+  @include respond-to(huge) {
+    font-size: 2.5rem;
+  }
+  &::before {
+    margin-right: 10px;
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url('../assets/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    @include respond-to(extra-small) {
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
+    }
+    @include respond-to(huge) {
+      width: 50px;
+      height: 50px;
+      background-size: 50px 50px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  &__title {
+    color: $white;
+    font-family: $roboto-mono;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    @include respond-to(extra-small) {
+      font-size: 1.2rem;
+    }
+  }
+  &--footer {
+    position: relative;
+    left: 0;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+  }
+}

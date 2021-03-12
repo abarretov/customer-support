@@ -1,0 +1,32 @@
+// BREAKPOINTS
+$breakpoints: (
+  tiny: 360px,
+  extra-small: 411px,
+  small: 768px,
+  medium: 1024px,
+  large: 1280px,
+  extra-large: 1366px,
+  huge: 1920px,
+  giant: 2560px,
+  colossal: 2880px
+);
+
+// COLORS
+$light-gray: #D2D2D2;
+$very-light-gray: #EFEFEF;
+$dark-gray: #444444;
+$blue: #004697;
+$btn-bg: #00E341;
+$btn-shadow: #008125;
+$moderate-pink: #0069E3;
+$pure-blue: #00A2E3;
+$pure-blue-transparent: transparentize($pure-blue, 0.5);
+$white: #FFFFFF;
+$white-transparent: transparentize($white, 0.6);
+$black: #000000;
+$black-transparent: transparentize($black, 0.7);
+
+// FONTS
+$roboto-mono: 'Roboto Mono', sans-serif;
+$roboto-slab: 'Roboto Slab', sans-serif;
+$open-sans: 'Open Sans', sans-serif;

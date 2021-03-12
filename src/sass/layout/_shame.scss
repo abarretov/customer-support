@@ -1,0 +1,9 @@
+.common--bottom {
+  @include respond-to(large) {
+    padding-bottom: 10%;
+  }
+}
+
+.bg--gray {
+  background-color: $very-light-gray;
+}

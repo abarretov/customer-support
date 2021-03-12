@@ -1,0 +1,83 @@
+.cta {
+  position: fixed;
+  bottom: -100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 103;
+  transition: visibility .3s, opacity .6s, bottom .6s;
+  &--show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $light-gray;
+    text-align: center;
+  }  
+  &__title {
+    padding: 3%;
+    width: 100%;
+    color: $dark-gray;
+    line-height: 1;
+  }
+  &__btn {
+    margin: auto;
+    border: 1px solid $white;
+    border-radius: 20px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    // max-width: 330px;
+    height: 60px;
+    background-color: $btn-bg;
+    color: $white;
+    font-family: $open-sans;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px $black;
+    box-shadow: 5px 5px 0 $btn-shadow;
+    animation: lighthouse 1.2s ease infinite;
+    &::before {
+      content: '';
+      margin-right: 10px;
+      width: 15%;
+      height: 100%;
+      // background-color: #BC3C97;
+      background-image: url(../assets/images/phone.svg);
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: center;
+      filter: drop-shadow(2px 2px 3px $black);
+    }
+  }
+  &__price {
+    padding: 3%;
+    // min-height: 60px;
+    // background-color: rgb(22,23,58);
+    color: $dark-gray;
+    font-family: $open-sans;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    // text-align: center;
+  }
+}
+
+@keyframes lighthouse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

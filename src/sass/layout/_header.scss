@@ -1,0 +1,20 @@
+.header {
+  position: absolute;
+  width: 100%;
+  max-width: 1920px;
+  box-shadow: 0 1px 8px $black;
+  z-index: 99;
+  &__container {
+    position: relative;
+    height: 60px;
+    @include respond-to(medium) {
+      height: 70px;
+    }
+    @include respond-to(large) {
+      height: 60px;
+    }
+    @include respond-to(huge) {
+      height: 70px;
+    }
+  }
+}
