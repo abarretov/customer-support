@@ -1,111 +1,78 @@
 .footer {  
-  margin-top: 5%;
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 8% 0;
-    background-color: $moderate-pink;
+  // margin-top: 5%;
+  & a, & p {
+    color: $white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  & a {
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__top, &__bottom {
+    padding: 5% 0;
     @include respond-to(small) {
       padding: 2% 0;
     }
-  }
-  &__text {
-    margin: 5% auto;
-    width: 90%;
-    color: $white;
-    font-family: $open-sans;
-    font-size: 0.8rem;
-    line-height: 1.2;
-    text-align: center;
-    @include respond-to(small) {
-      margin: 10px auto;
+    @include respond-to(large) {
+      padding: 1% 0;
     }
   }
-  &__links {
-    margin: 0 auto;
-    width: 100%;
-    font-family: $open-sans;
-    text-align: center;
+  &__top {
+    p {
+      text-align: center;
+      // font-size: 0.8rem;
+      font-style: italic;
+    }
+  }
+  &__bottom {
+    display: grid;
+    grid-template-areas: "brand"
+                         "copyright"
+                         "networks";
+    height: 200px;
     @include respond-to(small) {
-      width: 100%;
+      height: 170px;
     }
     @include respond-to(large) {
-      // flex-direction: row;
+      height: inherit;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: "brand copyright networks";
     }
+    & p {
+      font-weight: 600;
+    }
+  }
+  &__copyright {
+    grid-area: copyright;
+    align-self: center;
+    text-align: center;
+  }
+  &__nav {
+    margin-bottom: 5px;
     & a {
-      color: $white;
-      font-size: 0.8rem;
-      font-weight: 400;
-      line-height: 1;
-      text-decoration: none;
-      transition: 0.3s ease;
-      &:hover {
-        color: $white;
-      }
       &:nth-last-child(n+2) {
         &::after {
           margin: 0 5px;
           content: '/';
-          color: $white;
-          line-height: 1.4;
         }
-      }
-      @include respond-to(small) {
-      }
-      @include respond-to(huge) {
-        font-size: 1.5rem;
       }
     }
   }
-  &__company {
-    padding: 5% 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: $pure-blue;
-    color: $white;
-    font-family: $open-sans;
-    font-size: 0.8rem;
-    @include respond-to(small) {
-      padding: 2% 0;
-    }
+  &__networks {
+    grid-area: networks;
+    justify-self: center;
+    align-self: center;
     @include respond-to(large) {
-      flex-flow: row nowrap;
-      padding: 10px 5%;
-    }
-    & p, a {
-      margin-bottom: 3%;
-      width: 90%;
-      @include respond-to(small) {
-        margin-bottom: 1%;
-      }
-      @include respond-to(large) {
-        margin-bottom: 0;
-        padding: 0 10px;
-        width: auto;
-      }
-    }
-    & p {
-      line-height: 1.2;
-      text-align: center;
+      justify-self: end;
     }
     & a {
-      color: $white;
-      line-height: 1;
-      text-align: center;
-      &:hover, &:visited {
-        color: $white;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-      @include respond-to(small) {
-        width: auto;
-        text-align: inherit;
-      }
+      margin: 0 2px;
+      font-size: 20px;
     }
   }
 }

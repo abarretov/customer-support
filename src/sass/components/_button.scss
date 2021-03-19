@@ -1,23 +1,21 @@
 .btn {
   position: relative;
   margin: auto;
-  border: 1px solid $white;
-  border-radius: 15px;
+  border-radius: 35px;
   padding: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 90%;
   max-width: 330px;
   height: 65px;
-  background-color: $btn-bg;
+  background-color: $bright-orange;
   color: $white;
   font-family: $open-sans;
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;  
-  text-shadow: 1px 1px 3px $black;
-  box-shadow: 6px 6px 0 $btn-shadow, 7px 7px 8px $black;
+  box-shadow: 6px 6px $strong-orange;
   @include respond-to(extra-small) {
     font-size: 1.8rem;
     height: 75px;
@@ -29,38 +27,18 @@
     height: 90px;
   }
   @include respond-to(large) {
+    margin: unset;
     font-size: 2rem;
     padding: 0 5px;
     max-width: 330px;
     height: 65px;
   }
-  @include respond-to(huge) {
-    font-size: 2.2rem;
-    max-width: 435px;
-    height: 90px;
-  }
-  &::before {
-    content: '';
-    // margin-right: 10px;
-    width: 20%;
-    height: 100%;
-    // background-color: $moderate-pink;
-    background-image: url('../assets/images/phone.svg');
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    filter: drop-shadow(2px 2px 3px $black);
-    @include respond-to(extra-small) {
-      background-size: 40px;
-    }
-    @include respond-to(huge) {
-      margin-right: 20px;
-      background-size: 50px;
-    }
+  & i {
+    margin-right: 10px;
   }
   &:hover {
     top: 3px;
-    box-shadow: 3px 3px 0 $blue, 4px 4px 5px $black;
+    box-shadow: 3px 3px 0 $strong-orange;
   }
   &--shine {
     overflow: hidden;

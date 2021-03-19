@@ -12,21 +12,52 @@ $breakpoints: (
 );
 
 // COLORS
+$strong-blue: #197BBD;
+$bright-orange: #F2AF29;
+$dark-gray: #444444;
 $light-gray: #D2D2D2;
 $very-light-gray: #EFEFEF;
-$dark-gray: #444444;
+$white: #FFFFFF;
+$black: #000000;
+$black-transparent: transparentize($black, 0.7);
+$strong-blue-transparent: transparentize($strong-blue, 0.3);
+$black-transparent--hero: transparentize($black, 0.8);
+$strong-blue-transparent--hero: transparentize($strong-blue, 0.5);
+$strong-orange: #C3860C;
+
+
+$white-transparent: transparentize($white, 0.6);
+// $dark-blue: #125E8A;
+
+// $color-primary:
+// $color-primary-dark:
+// $color-primary-light: 
+
+// $primary:
+// $primaryLight: 
+// $primaryDark:
+
+// $secondary:
+// $secondaryLight:
+// $secondaryDark:
+
+// $neutralDarker:
+// $neutrayDark:
+// $neutral:
+// $neutralLight:
+// $neutralLighter: 
+// $neutralLightest:
+
 $blue: #004697;
 $btn-bg: #00E341;
 $btn-shadow: #008125;
 $moderate-pink: #0069E3;
 $pure-blue: #00A2E3;
 $pure-blue-transparent: transparentize($pure-blue, 0.5);
-$white: #FFFFFF;
-$white-transparent: transparentize($white, 0.6);
-$black: #000000;
-$black-transparent: transparentize($black, 0.7);
 
 // FONTS
+$ubuntu: 'Ubuntu', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
 $roboto-mono: 'Roboto Mono', sans-serif;
 $roboto-slab: 'Roboto Slab', sans-serif;
-$open-sans: 'Open Sans', sans-serif;

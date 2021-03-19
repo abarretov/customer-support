@@ -1,45 +1,45 @@
 .brand {
-  position: absolute;
-  top: 0;
-  left: 5%;
+  // position: absolute;
+  // top: 0;
+  // left: 5%;
   display: flex;
   align-items: center;
-  width: 70%;
+  // width: 70%;
   height: 100%;
   line-height: 1;
   text-decoration: none;
   z-index: 102;
   @include respond-to(small) {
-    width: 30%;
+    // width: 30%;
   }
   @include respond-to(medium) {
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
   }
   @include respond-to(large) {
-    left: 2%;
-    font-size: 2rem;
-    letter-spacing: 4px;
+    // left: 2%;
+    // font-size: 2rem;
+    // letter-spacing: 4px;
   }
   @include respond-to(huge) {
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
   }
   &::before {
     margin-right: 10px;
     content: '';
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background-image: url('../assets/images/logo.svg');
     background-repeat: no-repeat;
-    background-size: 35px 35px;
+    background-size: 30px;
     @include respond-to(extra-small) {
-      width: 40px;
-      height: 40px;
-      background-size: 40px 40px;
+      // width: 40px;
+      // height: 40px;
+      // background-size: 40px 40px;
     }
     @include respond-to(huge) {
-      width: 50px;
-      height: 50px;
-      background-size: 50px 50px;
+      // width: 50px;
+      // height: 50px;
+      // background-size: 50px 50px;
     }
   }
   &__content {
@@ -47,22 +47,26 @@
     flex-flow: column nowrap;
     justify-content: center;
   }
-  &__title {
+  &__title, &__subtitle {
     color: $white;
-    font-family: $roboto-mono;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: $ubuntu;
     line-height: 1;
-    text-transform: uppercase;
-    @include respond-to(extra-small) {
-      font-size: 1.2rem;
-    }
+  }
+  &__title {    
+    font-size: 20px;
+    font-weight: 500;
+    // text-transform: uppercase;
+  }
+  &__subtitle {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
   }
   &--footer {
-    position: relative;
-    left: 0;
-    margin: auto;
-    width: 90%;
-    justify-content: center;
+    grid-area: brand;
+    justify-self: center;
+    @include respond-to(large) {
+      justify-self: start;
+    }
   }
 }

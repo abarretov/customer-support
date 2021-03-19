@@ -1,85 +1,52 @@
 .contact {
-  position: relative;
-  padding-top: 60px;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  // flex-wrap: wrap;
   @include respond-to(small) {
-    padding: 5% 0;
-  }
-  &__container {
-    margin: 15% 10%;
-    // width: 100%;
-    z-index: 1;
-    @include respond-to(small) {
-      margin: auto;
-      width: 90%;
-    }
-    @include respond-to(large) {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  }
-  &__title {
-    position: relative;
-    margin-bottom: 10%;
-    font-family: $roboto-mono;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    text-align: center;
-    @include respond-to(small) {
-      margin-bottom: 1.4rem;
-      font-size: 1.1rem;
-    }
-    @include respond-to(large) {
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-      width: 100%;
-      font-size: 2rem;
-    }
-    @include respond-to(huge) {
-      font-size: 3rem;
-    }
+    display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
   }
   &__text {
-    margin-bottom: 8%;
-    width: 100%;
-    font-family: $open-sans;
-    font-size: 0.8rem;
-    line-height: 1.6;
-    @include respond-to(large) {
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.4;
-    }
-    @include respond-to(huge) {
-      font-size: 2rem;
-    }
+    // color: $white;
+    padding: 0 5%;
   }
   &__form {
     width: 100%;
     margin-bottom: 15%;
+    padding-top: 10%;
     @include respond-to(small) {
-      width: 45%;
+      margin-bottom: 0;
+      padding-top: 0;
     }
     @include respond-to(large) {
-      width: 35%;
-      margin-bottom: 0;
+      // width: 40%;
+      padding-top: 5%;
     }
   }
   &__map {
-    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 75%;
+    width: 90%;
+    height: 0;
+    overflow: hidden;
     @include respond-to(small) {
-      margin-top: 5%;
-      width: 50%;
+      margin-top: 0;
     }
     @include respond-to(large) {
-      margin-top: 0;
-      width: 60%;
+      padding-bottom: 56.25%;
+      // width: 60%;
     }
-  }
-  &__iframe {
-    width: 100%;
+    & iframe {
+      position:absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
