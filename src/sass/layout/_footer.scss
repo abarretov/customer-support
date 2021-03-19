@@ -1,8 +1,7 @@
-.footer {  
-  // margin-top: 5%;
+.footer {
   & a, & p {
     color: $white;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -24,7 +23,6 @@
   &__top {
     p {
       text-align: center;
-      // font-size: 0.8rem;
       font-style: italic;
     }
   }

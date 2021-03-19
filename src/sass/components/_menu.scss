@@ -1,17 +1,4 @@
 .menu {
-  // position: relative;
-  // height: 100%;
-  // height: 60px;
-  @include respond-to(medium) {
-    // height: 70px;
-  }
-  @include respond-to(large) {
-    // height: 60px;
-    // background-color: $pure-blue;
-  }
-  @include respond-to(huge) {
-    // height: 70px;
-  }
   &__nav {
     position: fixed;
     top: -100%;
@@ -26,7 +13,6 @@
       border-bottom: none;
       position: relative;
       top: 0;
-      // right: 2%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -43,27 +29,18 @@
   &__link {
     position: relative;
     border-bottom: 1px solid $dark-gray;
-    // background-color: $pure-blue-transparent;
     padding: 4% 12%;
     display: flex;
     align-items: center;
     color: $dark-gray;
     font-family: $ubuntu;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 2px;
     text-decoration: none;
-    // text-shadow: 1px 1px 3px $black;
-    // text-transform: uppercase;
-    // box-shadow: 1px 1px 3px $black;
-    // transition: 0.2s;
-    @include respond-to(extra-small) {
-      // padding: 4% 12%;
-    }
     @include respond-to(small) {
       padding: 2% 6%;
-      // font-size: 1.3rem;
     }
     @include respond-to(large) {
       margin: 0 15px;
@@ -71,9 +48,7 @@
       padding: 0;
       height: 100%;
       color: $white;
-      // font-weight: 700;
       box-shadow: none;
-      // text-shadow: unset;
       z-index: 1;
     }
     &::before {
@@ -113,28 +88,12 @@
       border-radius: 20px;
       padding: 10px 20px;
       background-color: $bright-orange;
-      // text-shadow: 1px 1px 3px $black;
-      // transition: 0.3s;
       &:hover {
         color: $white;
         border: none;
-        // text-shadow: 2px 2px 3px $black;
       }
     }
   }
-  // &__line {
-  //   position: relative;
-  //   width: 100%;
-  //   height: 60px;
-  //   background-color: $pure-blue;
-  //   z-index: 101;
-  //   @include respond-to(medium) {
-  //     height: 70px;
-  //   }
-  //   @include respond-to(large) {
-  //     display: none;
-  //   }
-  // }
   &__btn {
     position: absolute;    
     top: 50%;
@@ -145,34 +104,27 @@
     cursor: pointer;
     user-select: none;
     z-index: 101;
-    @include respond-to(medium) {
-      // top: 24%;
-    }
     @include respond-to(large) {
       display: none;
     }
     &--active .menu__shape {
       right: 5px;
       width: 25px;
-      // background-color: $soft-yellow;
       background: transparent;
     }
     &--active .menu__shape::before {
       top: 0;
       width: 25px;
-      // background-color: $soft-yellow;
       transform: rotate(-45deg);
     }
     &--active .menu__shape::after {
       top: 0;
       width: 25px;
-      // background-color: $soft-yellow;
       transform: rotate(45deg);
     }
   }
   &__shape {
     position: absolute;
-    // top: 18px;
     top: 50%;
     transform: translateY(-50%);
     right: 0;

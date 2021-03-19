@@ -1,0 +1,12 @@
+@keyframes lighthouse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.lighthouse {
+  animation: lighthouse 1.2s ease infinite;
+}
